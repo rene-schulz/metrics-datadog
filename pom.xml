@@ -108,4 +108,11 @@
             </plugin>
         </plugins>
     </build>
+
+    <scm>
+        <connection>scm:git:git://github.com/rene-schulz/metrics-datadog.git</connection>
+        <developerConnection>scm:git:git@github.com:rene-schulz/metrics-datadog.git</developerConnection>
+        <url>https://github.com/rene-schulz/metrics-datadog</url>
+        <tag>HEAD</tag>
+    </scm>
 </project>
