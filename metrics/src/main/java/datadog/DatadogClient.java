@@ -12,6 +12,7 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
+import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,6 +50,7 @@ public final class DatadogClient {
             if (response.getStatusLine().getStatusCode() != HttpStatus.SC_ACCEPTED) {
                 LOG.warn("Error submitting datadog metrics: %s", response.getStatusLine());
             }
+            EntityUtils.consumeQuietly(response.getEntity());
         } catch (IOException e) {
             LOG.warn("Error submitting datadog metrics", e);
         }
