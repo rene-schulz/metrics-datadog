@@ -1,4 +1,4 @@
-package io.schulz.metrics.datadog;
+package datadog;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -39,7 +39,6 @@ public final class DatadogClient {
     private HttpClient newHttpClient() {
         return HttpClientBuilder.create().setConnectionManager(new PoolingHttpClientConnectionManager()).build();
     }
-
 
     public void push(DatadogMetricSeries message) {
         try {

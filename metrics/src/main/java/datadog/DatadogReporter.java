@@ -1,4 +1,4 @@
-package io.schulz.metrics.datadog;
+package datadog;
 
 import com.codahale.metrics.*;
 
@@ -8,13 +8,13 @@ import java.util.SortedMap;
 import java.util.concurrent.TimeUnit;
 
 @SuppressWarnings("unused")
-public class DatadogReporter extends ScheduledReporter {
+public final class DatadogReporter extends ScheduledReporter {
 
     public static Builder forRegistry(MetricRegistry registry) {
         return new Builder(registry);
     }
 
-    static class  Builder {
+    public static class  Builder {
 
         private MetricRegistry registry;
         private String datadogKey;

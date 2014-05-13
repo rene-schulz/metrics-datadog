@@ -1,13 +1,9 @@
-package io.schulz.metrics.datadog;
+package datadog;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.collect.Lists;
 
 import java.util.List;
-
-import static io.schulz.metrics.datadog.DatadogMetricSeries.DatadogMetric.TYPE.COUNTER;
-import static io.schulz.metrics.datadog.DatadogMetricSeries.DatadogMetric.TYPE.GAUGE;
-
 
 public class DatadogMetricSeries {
 
@@ -25,11 +21,11 @@ public class DatadogMetricSeries {
     }
 
     public void addGauge(String name, Number value) {
-        series.add(new DatadogMetric(name, timestamp, value, GAUGE, host, tags));
+        series.add(new DatadogMetric(name, timestamp, value, DatadogMetric.TYPE.GAUGE, host, tags));
     }
 
     public void addCounter(String name, Long value) {
-        series.add(new DatadogMetric(name, timestamp, value, COUNTER, host, tags));
+        series.add(new DatadogMetric(name, timestamp, value, DatadogMetric.TYPE.COUNTER, host, tags));
     }
 
     @JsonProperty
