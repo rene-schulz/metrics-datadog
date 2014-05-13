@@ -1,4 +1,4 @@
-package io.schulz.metrics.datadog;
+package io.schulz.metrics.dropwizard.datadog;
 
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.ScheduledReporter;

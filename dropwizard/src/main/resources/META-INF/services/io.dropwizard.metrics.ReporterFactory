@@ -1,1 +1,1 @@
-com.bazaarvoice.dropwizard.metrics.DatadogReporterFactory
+io.schulz.metrics.dropwizard.datadog.DatadogReporterFactory
