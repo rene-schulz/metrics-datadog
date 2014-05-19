@@ -20,9 +20,7 @@ Extends the attributes that are available to :ref:`formatted reporters <man-conf
 Name                   Default                                    Description
 ====================== =========================================  ===========
 endpoint               https://app.datadoghq.com/api/v1/series    The API Endpoint for Datadog
-====================== =========================================  ===========
-endpoint               No Default                                 The API Authorization Key
-====================== =========================================  ===========
+apiKey                 No Default                                 The API Authorization Key
 
 
 
