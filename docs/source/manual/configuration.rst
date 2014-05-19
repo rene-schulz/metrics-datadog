@@ -21,6 +21,7 @@ Name                   Default                                    Description
 ====================== =========================================  ===========
 endpoint               https://app.datadoghq.com/api/v1/series    The API Endpoint for Datadog
 apiKey                 No Default                                 The API Authorization Key
+====================== =========================================  ===========
 
 
 
