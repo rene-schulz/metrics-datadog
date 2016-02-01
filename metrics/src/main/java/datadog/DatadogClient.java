@@ -48,7 +48,7 @@ public final class DatadogClient {
             post.setEntity(jsonify(message));
             HttpResponse response = httpClient.execute(post);
             if (response.getStatusLine().getStatusCode() != HttpStatus.SC_ACCEPTED) {
-                LOG.warn("Error submitting datadog metrics: %s", response.getStatusLine());
+                LOG.warn(String.format("Error submitting datadog metrics: %s", response.getStatusLine()));
             }
             EntityUtils.consumeQuietly(response.getEntity());
         } catch (IOException e) {
